@@ -1,7 +1,7 @@
-// @flow
 import React from 'react';
 import './App.css';
+import Navigation from './navigation/Navigation';
 
-const App = () => <div>Hello World</div>;
+const App = () => <Navigation />;
 
 export default App;
