@@ -30,7 +30,7 @@ class Navigation extends Component {
   render() {
     return (
       <div>
-        <AppBar>
+        <AppBar position="static">
           <Toolbar>
             <IconButton
               color="contrast"
