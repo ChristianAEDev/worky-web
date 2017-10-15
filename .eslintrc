@@ -4,6 +4,9 @@
   "plugins": ["react", "jsx-a11y", "import"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/forbid-prop-types": "off",
+    // TODO: Question wether or not the rule in the next line should be activated
+    "no-console": "off",
     "require-jsdoc": [
       "error",
       {
@@ -11,7 +14,7 @@
           "FunctionDeclaration": true,
           "MethodDefinition": true,
           "ClassDeclaration": true,
-          "ArrowFunctionExpression": false
+          "ArrowFunctionExpression": true
         }
       }
     ]

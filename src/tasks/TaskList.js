@@ -5,7 +5,7 @@ import List from 'material-ui/List';
 import TaskListItem from './TaskListItem';
 
 /**
- * Displays as (sortable) list of tasks.
+ * Displays a (sortable) list of tasks.
  */
 class TaskList extends Component {
   /**

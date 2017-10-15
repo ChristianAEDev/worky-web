@@ -1,4 +1,5 @@
 {
   "presets": ["react", "flow"],
+  "plugins": ["transform-class-properties"],
   "retainLines": true
 }
