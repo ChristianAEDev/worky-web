@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import { SortableHandle } from 'react-sortable-hoc';
 import { withStyles } from 'material-ui/styles';
 import classnames from 'classnames';
-import Card, { CardHeader, CardMedia, CardContent, CardActions } from 'material-ui/Card';
+import Card, { CardHeader, CardContent, CardActions } from 'material-ui/Card';
 import Collapse from 'material-ui/transitions/Collapse';
 import Avatar from 'material-ui/Avatar';
 import IconButton from 'material-ui/IconButton';
@@ -43,6 +44,13 @@ const styles = theme => ({
 });
 
 /**
+ * HOC provided by react-sortable-hoc to give a list item which reacts to being clicked and drags
+ * the item.
+ *
+ */
+const DragHandle = SortableHandle(() => <Avatar aria-label="Task">T</Avatar>);
+
+/**
  * Display a single task.
  */
 // TODO: Remove next line!
@@ -76,11 +84,7 @@ class TaskListItem extends Component {
         <Card>
           <CardHeader
             className={classes.cardHeader}
-            avatar={
-              <Avatar aria-label="Task" className={classes.avatar}>
-                T
-              </Avatar>
-            }
+            avatar={<DragHandle />}
             title={task.title}
             subheader={moment(task.timeCreated).format(DATE_TIME_FORMAT)}
           />
