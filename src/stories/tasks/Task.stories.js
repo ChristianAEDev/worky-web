@@ -7,23 +7,26 @@ const task = {
   title: 'title 1',
   content: 'TASK CONTENT',
   timeCreated: '2017-10-15 19:09:15.573863574',
-  udpates: [
+  updates: [
     {
       id: 1,
       timestamp: '2017-10-17 09:09:15.573863574',
       type: 'PHONE_CALL',
+      title: 'Call from Peter',
       description: 'Talked about the current issues in production.',
     },
     {
       id: 2,
-      timestamp: '2017-10-17 09:09:15.573863574',
+      timestamp: '2017-10-18 09:09:15.573863574',
       type: 'FILE',
-      description: 'Description of the task cases',
+      title: '',
+      description: 'Description of the test cases',
     },
     {
       id: 2,
-      timestamp: '2017-10-17 09:09:15.573863574',
+      timestamp: '2017-10-21 05:09:15.573863574',
       type: 'MAIL',
+      title: 'Mail from Mark',
       description: 'Request to add a feature.',
     },
   ],

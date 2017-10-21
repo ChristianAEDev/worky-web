@@ -47,8 +47,7 @@ class TaskList extends Component {
 }
 
 TaskList.propTypes = {
-  classes: PropTypes.object.isRequired,
-  task: PropTypes.object.isRequired,
+  tasks: PropTypes.object.isRequired,
 };
 
 export default TaskList;
