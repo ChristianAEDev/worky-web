@@ -4,6 +4,7 @@ import moment from 'moment';
 import { SortableHandle } from 'react-sortable-hoc';
 import { withStyles } from 'material-ui/styles';
 import classnames from 'classnames';
+import ReactMarkdown from 'react-markdown';
 import Card, { CardHeader, CardContent, CardActions } from 'material-ui/Card';
 import Collapse from 'material-ui/transitions/Collapse';
 import Avatar from 'material-ui/Avatar';
@@ -108,7 +109,9 @@ class TaskListItem extends Component {
           </CardActions>
           <Collapse in={this.state.expanded} transitionDuration="auto" unmountOnExit>
             <CardContent>
-              <Typography paragraph>{task.content}</Typography>
+              <Typography paragraph>
+                <ReactMarkdown source={task.content} />
+              </Typography>
             </CardContent>
           </Collapse>
         </Card>

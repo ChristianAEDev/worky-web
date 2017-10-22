@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import ReactMarkdown from 'react-markdown';
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
 import { DATE_TIME_FORMAT } from '../Defines';
@@ -34,7 +35,7 @@ class Task extends Component {
           </Grid>
           <Grid item xs={12}>
             <Typography type="body2" gutterBottom>
-              {task.content}
+              <ReactMarkdown source={task.content} />
             </Typography>
           </Grid>
           <Grid>

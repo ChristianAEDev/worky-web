@@ -5,7 +5,8 @@ import Task from '../../tasks/Task';
 const task = {
   id: 1,
   title: 'title 1',
-  content: 'TASK CONTENT',
+  content:
+    '# Headline\n\nContent of a task.\n\n* Follows the [CommonMark](http://commonmark.org/) spec\n* Render a string as markdown',
   timeCreated: '2017-10-15 19:09:15.573863574',
   updates: [
     {
