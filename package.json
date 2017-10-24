@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.17.0",
     "classnames": "^2.2.5",
     "codemirror": "^5.30.0",
     "lodash": "^4.17.4",
@@ -15,8 +16,12 @@
     "react-dom": "^16.0.0",
     "react-event-timeline": "^1.4.0",
     "react-markdown": "^2.5.0",
+    "react-redux": "^5.0.6",
     "react-scripts": "1.0.14",
     "react-sortable-hoc": "^0.6.8",
+    "redux": "^3.7.2",
+    "redux-form": "^7.1.1",
+    "redux-promise": "^0.5.3",
     "typeface-roboto": "0.0.35"
   },
   "scripts": {

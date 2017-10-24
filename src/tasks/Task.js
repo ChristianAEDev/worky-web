@@ -4,7 +4,7 @@ import moment from 'moment';
 import ReactMarkdown from 'react-markdown';
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
-import { DATE_TIME_FORMAT } from '../Defines';
+import { DATE_TIME_FORMAT } from '../utils/Defines';
 import TaskUpdates from './TaskUpdates';
 
 /**

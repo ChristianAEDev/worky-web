@@ -9,12 +9,10 @@ import Card, { CardHeader, CardContent, CardActions } from 'material-ui/Card';
 import Collapse from 'material-ui/transitions/Collapse';
 import Avatar from 'material-ui/Avatar';
 import IconButton from 'material-ui/IconButton';
-import Typography from 'material-ui/Typography';
-import red from 'material-ui/colors/red';
 import DeleteIcon from 'material-ui-icons/Delete';
 import EditIcon from 'material-ui-icons/ModeEdit';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
-import { DATE_TIME_FORMAT } from '../Defines';
+import { DATE_TIME_FORMAT } from '../utils/Defines';
 
 /**
  * Styles for this component
@@ -35,9 +33,6 @@ const styles = theme => ({
   },
   expandOpen: {
     transform: 'rotate(180deg)',
-  },
-  avatar: {
-    backgroundColor: red[500],
   },
   flexGrow: {
     flex: '1 1 auto',
@@ -109,9 +104,7 @@ class TaskListItem extends Component {
           </CardActions>
           <Collapse in={this.state.expanded} transitionDuration="auto" unmountOnExit>
             <CardContent>
-              <Typography paragraph>
-                <ReactMarkdown source={task.content} />
-              </Typography>
+              <ReactMarkdown source={task.content} />
             </CardContent>
           </Collapse>
         </Card>
