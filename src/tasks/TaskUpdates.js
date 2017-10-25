@@ -5,7 +5,7 @@ import moment from 'moment';
 import PhoneIcon from 'material-ui-icons/PermPhoneMsg';
 import FileIcon from 'material-ui-icons/Description';
 import MailIcon from 'material-ui-icons/Email';
-import { DATE_TIME_FORMAT } from '../Defines';
+import { DATE_TIME_FORMAT } from '../utils/Defines';
 
 /**
  * Component to display all updates of a task.

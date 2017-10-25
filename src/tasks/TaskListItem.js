@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import moment from 'moment';
 import { SortableHandle } from 'react-sortable-hoc';
 import { withStyles } from 'material-ui/styles';
@@ -10,7 +11,7 @@ import Collapse from 'material-ui/transitions/Collapse';
 import Avatar from 'material-ui/Avatar';
 import IconButton from 'material-ui/IconButton';
 import DeleteIcon from 'material-ui-icons/Delete';
-import EditIcon from 'material-ui-icons/ModeEdit';
+import InfoIcon from 'material-ui-icons/Info';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 import { DATE_TIME_FORMAT } from '../utils/Defines';
 
@@ -85,9 +86,11 @@ class TaskListItem extends Component {
             subheader={moment(task.timeCreated).format(DATE_TIME_FORMAT)}
           />
           <CardActions disableActionSpacing>
-            <IconButton aria-label="Edit">
-              <EditIcon />
-            </IconButton>
+            <Link to={`/tasks/${task.id}`}>
+              <IconButton aria-label="Edit">
+                <InfoIcon />
+              </IconButton>
+            </Link>
             <IconButton aria-label="Delete">
               <DeleteIcon />
             </IconButton>

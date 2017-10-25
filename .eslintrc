@@ -6,6 +6,7 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/forbid-prop-types": "off",
     "react/prefer-stateless-function": "off",
+    "jsx-a11y/anchor-is-valid": "off",
     // TODO: Question wether or not the rule in the next line should be activated
     "no-console": "off",
     "require-jsdoc": [

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import { CircularProgress } from 'material-ui/Progress';
 import ReactMarkdown from 'react-markdown';
 import Grid from 'material-ui/Grid';
 import Typography from 'material-ui/Typography';
@@ -16,6 +17,10 @@ class Task extends Component {
    */
   render() {
     const { task } = this.props;
+
+    if (typeof task === 'undefined') {
+      return <CircularProgress />;
+    }
 
     return (
       <div>

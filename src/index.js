@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import 'typeface-roboto'; // eslint-disable-line
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
@@ -17,7 +18,9 @@ ReactDOM.render(
       window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), // eslint-disable-line
     )}
   >
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root'), // eslint-disable-line
 );
