@@ -32,8 +32,14 @@ class TaskUpdates extends Component {
    */
   render() {
     const { updates } = this.props;
+
+    if (updates === null) {
+      return <div />;
+    }
+
     return (
       <div>
+        {typeof updates === 'undefined' && <div />}
         <Timeline>
           {updates.map(update => (
             <TimelineEvent
@@ -53,7 +59,11 @@ class TaskUpdates extends Component {
 }
 
 TaskUpdates.propTypes = {
-  updates: PropTypes.array.isRequired,
+  updates: PropTypes.array,
+};
+
+TaskUpdates.defaultProps = {
+  updates: null,
 };
 
 export default TaskUpdates;
